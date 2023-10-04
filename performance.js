@@ -96,10 +96,7 @@ class Api {
         try {
             const response = await fetch(`https://api.github.com/search/repositories?q=${text}&per_page=5`, {
                 method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': 'Bearer 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',
-                },
+
             });
 
             if (!response.ok) {
