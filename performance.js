@@ -39,7 +39,7 @@ class AddOptions {
     }
 
     add(data) {
-        console.log(data);
+        this.reset()
         data.forEach(element => {
             const option = document.createElement("div");
             option.innerText = element.name;
@@ -52,7 +52,6 @@ class AddOptions {
     }
 
     reset() {
-        input.value=""
         while (this.query.firstChild) {
             this.query.removeChild(this.query.firstChild)
         }
@@ -82,6 +81,7 @@ class AddOptions {
                 this.remove(id)
             })
         })
+        input.value=""
         this.reset()
     }
 
@@ -98,7 +98,7 @@ class Api {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer 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',
                 },
             });
 
