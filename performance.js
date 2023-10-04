@@ -70,15 +70,16 @@ class AddOptions {
                     </ul>
                 </div>
                 <div " class="wrap__box__remove">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <svg class="${id}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                         <line x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="5"/>
                         <line x1="10" y1="90" x2="90" y2="10" stroke="red" stroke-width="5"/>
                     </svg>
                 </div>`
         document.querySelector(".wrap__box").appendChild(wrapBoxInfo)
         document.querySelectorAll(".wrap__box__remove").forEach(el=>{
-            el.onclick=(()=>{
-                this.remove(id)
+            el.onclick=((e)=>{
+                //console.log(e.target.classList[0])
+                this.remove(e.target.classList[0])
             })
         })
         input.value=""
